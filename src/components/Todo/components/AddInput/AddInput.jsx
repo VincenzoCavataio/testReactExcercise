@@ -5,7 +5,7 @@ export const AddInput = ({ setElements, elements }) => {
 
   const onClick = (event) => {
     event.preventDefault();
-    if (currentElement.trim() !== "") {
+    if (currentElement && currentElement.trim() !== "") {
       setElements([...elements, currentElement]);
       setCurrentElement("");
     }

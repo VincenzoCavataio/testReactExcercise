@@ -6,10 +6,13 @@ export const Counter = ({ type }) => {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={type === "red" ? styleBlaBla2 : styleBlaBla}>
-      <button onClick={() => setCount(count - 1)}>-</button>
-      <span>{count}</span>
-      <button onClick={() => setCount(count + 1)}>+</button>
-    </div>
+    <>
+      <h2>Counter</h2>
+      <div style={type === "red" ? styleBlaBla2 : styleBlaBla}>
+        <button onClick={() => setCount(count - 1)}>-</button>
+        <span>{count}</span>
+        <button onClick={() => setCount(count + 1)}>+</button>
+      </div>
+    </>
   );
 };
