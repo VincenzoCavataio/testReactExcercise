@@ -5,7 +5,10 @@ export const AddInput = ({ setElements, elements }) => {
 
   const onClick = (event) => {
     event.preventDefault();
-    setElements([...elements, currentElement]);
+    if (currentElement.trim() !== "") {
+      setElements([...elements, currentElement]);
+      setCurrentElement("");
+    }
   };
 
   return (
@@ -14,8 +17,9 @@ export const AddInput = ({ setElements, elements }) => {
         type="text"
         placeholder="add element"
         onChange={(event) => setCurrentElement(event.target.value)}
+        value={currentElement}
       />
-      <input type="submit" value="add" />
+      <input type="submit" value="+" />
     </form>
   );
 };

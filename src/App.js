@@ -1,11 +1,11 @@
 import { Counter } from "./components/Counter";
-import { Wrapper } from "./components/Todo/components";
+import { TODO } from "./components/Todo";
 
 function App() {
   return (
     <div className="App">
       <Counter />
-      <Wrapper />
+      <TODO />
     </div>
   );
 }
